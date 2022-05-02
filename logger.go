@@ -1,17 +1,24 @@
 package chalk
 
 var (
-	//
+	// Success is the success color
 	Success = func(message string) string {
-		return Green.Color("✔ " + message)
+		return Green("✔ " + message)
 	}
+	// Info is the info color
 	Info = func(message string) string {
-		return Blue.Color("ℹ " + message)
+		return Blue("ℹ " + message)
 	}
+	// Warn is the warn color
 	Warn = func(message string) string {
-		return Yellow.Color("⚠ " + message)
+		return Yellow("⚠ " + message)
 	}
+	// Error is the error color
 	Error = func(message string) string {
-		return Red.Color("✖ " + message)
+		return Red("✖ " + message)
+	}
+	// Debug is the debug color
+	Debug = func(message string) string {
+		return Gray("ℹ " + message)
 	}
 )
