@@ -6,7 +6,7 @@ import (
 )
 
 func TestColor(t *testing.T) {
-	col := Color{31}
+	col := Color{31, 39}
 	if col.Value() != 31 {
 		t.Errorf("Expected 1, got %d", col.Value())
 	}
@@ -16,7 +16,7 @@ func TestColor(t *testing.T) {
 		t.Errorf("Expected %s, got %s", expected, col.String())
 	}
 
-	expected = fmt.Sprintf("%shello%s", expected, ResetColor)
+	expected = fmt.Sprintf("%shello%s", expected, Color{39, -1})
 	if col.Color("hello") != expected {
 		t.Errorf("Expected %s, got %s", expected, col.Color("hello"))
 	}

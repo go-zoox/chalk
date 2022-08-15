@@ -19,6 +19,6 @@ var (
 	}
 	// Debug is the debug color
 	Debug = func(message string) string {
-		return Gray("ℹ " + message)
+		return White("ℹ " + message)
 	}
 )
